@@ -20,14 +20,14 @@ class RequestForm extends StatelessWidget {
               Container(
                 alignment: Alignment.centerLeft,
                 child: IconButton(
-                  onPressed: () => print('Arrow Back Ios'),
+                  onPressed: () => {Navigator.pop(context)},
                   padding: EdgeInsets.symmetric(vertical: 30.0),
                   icon: Icon(Icons.arrow_back_ios),
                   color: Colors.white,
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
@@ -208,7 +208,7 @@ class RequestForm extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(
-                                height: 10.0,
+                                height: 5.0,
                               ),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -250,7 +250,7 @@ class RequestForm extends StatelessWidget {
                                     ),
                                   ),
                                   SizedBox(
-                                    height: 10.0,
+                                    height: 8.0,
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -267,11 +267,11 @@ class RequestForm extends StatelessWidget {
                                               )),
                                           color: Colors.blue,
                                           child: Text(
-                                            'Next',
+                                            'Send Request',
                                             style: TextStyle(
                                               color: Colors.white,
                                               fontFamily: 'Raleway',
-                                              fontSize: 20.0,
+                                              fontSize: 15.0,
                                               fontWeight: FontWeight.bold,
                                             ),
                                           ),
@@ -280,9 +280,8 @@ class RequestForm extends StatelessWidget {
                                             if (_formKey.currentState.validate()) {
                                               Navigator.push(context,
                                                   MaterialPageRoute(
-                                                      builder: (context) {
-                                                        return AddProperty();
-                                                      }));
+                                                     )
+                                              );
                                             }
                                           })
                                     ],
