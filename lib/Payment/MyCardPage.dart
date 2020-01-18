@@ -150,6 +150,7 @@ class _MyCardsPageState extends State<MyCardsPage>
 //                        value: _rotationFactor,
 //                      ),
                         TextFormField(
+                          keyboardType: TextInputType.number,
                           controller: _cardNumberController,
                           maxLength: 16,
                           decoration: InputDecoration(
@@ -181,6 +182,7 @@ class _MyCardsPageState extends State<MyCardsPage>
                             Expanded(
                               flex: 2,
                               child: TextFormField(
+                                keyboardType: TextInputType.datetime,
                                 controller: _cardExpiryController,
                                 maxLength: 3,
                                 decoration: InputDecoration(
@@ -198,6 +200,7 @@ class _MyCardsPageState extends State<MyCardsPage>
                             Expanded(
                               flex: 1,
                               child: TextFormField(
+                                keyboardType: TextInputType.number,
                                 focusNode: _cvvFocusNode,
                                 controller: _cvvController,
                                 maxLength: 3,
